@@ -56,21 +56,9 @@ function App() {
   };
 
   const handleNewGame = () => {
-    setGrid([...Array(10)].map(() => Array(10).fill(0)));
-    setRowClues(Array(10).fill(""));
-    setColClues(Array(10).fill(""));
-    setGridHistory([]);
-    setYear("");
-    setMonth("");
-    setDay("");
     window.location.reload();
   };
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  const handleLoadPuzzle = async () => {
-  };
-  
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
+
   useEffect(() => {
     const cells = document.querySelectorAll(".cell");
 
@@ -152,7 +140,7 @@ function App() {
               onChange={(e) => setDay(e.target.value)}
             />
           </label>
-          <button onClick={handleLoadPuzzle}>Load Puzzle</button>
+          <button>Load Puzzle</button>
         </div>
         <button onClick={handleNewGame}>New Game</button>
         <div className="controls">
